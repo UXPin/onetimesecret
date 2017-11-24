@@ -7,7 +7,8 @@ RUN apk update && \
     apk add --no-cache \
         make \
         gcc \
-        g++
+        g++ \
+        redis
 
 ADD Gemfile Gemfile.lock ./
 RUN bundle install
