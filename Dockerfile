@@ -13,3 +13,7 @@ RUN apk update && \
 ADD Gemfile Gemfile.lock ./
 RUN bundle install
 ADD . ./
+
+RUN mkdir -p /var/log/onetime /var/run/onetime /var/lib/onetime
+RUN mkdir -p /etc/onetime
+COPY etc/ /etc/onetime/
