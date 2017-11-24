@@ -17,3 +17,6 @@ ADD . ./
 RUN mkdir -p /var/log/onetime /var/run/onetime /var/lib/onetime
 RUN mkdir -p /etc/onetime
 COPY etc/ /etc/onetime/
+
+EXPOSE 7143
+CMD ["/bin/sh", "/opt/onetimesecret/bin/run.sh"]
