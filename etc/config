@@ -1,6 +1,6 @@
 :site:
-  :host: localhost:7143
-  :domain: localhost
+  :host: <%= ENV['ONETIMESECRET_HOST'] %>
+  :domain: <%= ENV['ONETIMESECRET_DOMAIN'] %>
   :ssl: false
   # NOTE Once the secret is set, do not change it (keep a backup offsite)
   :secret: CHANGEME
