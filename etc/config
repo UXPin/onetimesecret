@@ -1,9 +1,8 @@
 :site:
   :host: <%= ENV['ONETIMESECRET_HOST'] %>
   :domain: <%= ENV['ONETIMESECRET_DOMAIN'] %>
-  :ssl: false
-  # NOTE Once the secret is set, do not change it (keep a backup offsite)
-  :secret: CHANGEME
+  :ssl: true
+  :secret: <%= ENV['ONETIMESECRET_SECRET'] %>
 :redis:
   :uri: 'redis://127.0.0.1:6379/0?timeout=10&thread_safe=false&logging=false'
   :config: /etc/onetime/redis.conf
